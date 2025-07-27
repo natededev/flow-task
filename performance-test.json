@@ -1,0 +1,20 @@
+{
+  "name": "performance-optimized-build",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:optimized": "npm run build && npm run analyze",
+    "build": "vite build --mode production",
+    "analyze": "npx vite-bundle-analyzer dist",
+    "preview:optimized": "vite preview --port 3000 --host",
+    "test:lighthouse": "lighthouse http://localhost:3000 --chrome-flags=\"--headless\" --output=json --output-path=./lighthouse-report.json",
+    "test:performance": "npm run build:optimized && npm run preview:optimized & sleep 5 && npm run test:lighthouse && pkill -f 'vite preview'"
+  },
+  "lighthouse": {
+    "extends": "lighthouse:default",
+    "settings": {
+      "onlyCategories": ["performance", "accessibility"],
+      "skipAudits": ["uses-http2"]
+    }
+  }
+}
