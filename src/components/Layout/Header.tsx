@@ -57,7 +57,7 @@ export const Header = ({ onNewTask, onNewProject, onMobileMenuToggle }: HeaderPr
           <Menu className="h-5 w-5" />
         </Button>
         
-        <h1 className="text-lg sm:text-xl font-bold text-primary">TaskFlow</h1>
+        <h1 className="text-lg sm:text-xl font-bold text-primary">FlowTask</h1>
         
         {/* Search - Hidden on mobile, shown on larger screens */}
         <div className="relative hidden sm:block">

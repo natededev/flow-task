@@ -35,7 +35,7 @@ export const RegisterForm = ({ onSwitchToLogin }: RegisterFormProps) => {
       await registerUser(data.email, data.password, data.name);
       toast({
         title: 'Account created!',
-        description: 'Welcome to TaskFlow. You can now start managing your tasks.',
+        description: 'Welcome to FlowTask. You can now start managing your tasks.',
       });
     } catch (error) {
       toast({
@@ -53,7 +53,7 @@ export const RegisterForm = ({ onSwitchToLogin }: RegisterFormProps) => {
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold">Create Account</CardTitle>
         <CardDescription>
-          Sign up to get started with TaskFlow
+          Sign up to get started with FlowTask
         </CardDescription>
       </CardHeader>
       <CardContent>
