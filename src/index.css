@@ -185,4 +185,47 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Remove all focus rings from inputs and textareas */
+  input:focus,
+  input:focus-visible,
+  textarea:focus,
+  textarea:focus-visible,
+  select:focus,
+  select:focus-visible,
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="search"]:focus,
+  [type="url"]:focus,
+  [type="tel"]:focus,
+  [type="date"]:focus,
+  [type="time"]:focus,
+  [type="datetime-local"]:focus,
+  [contenteditable="true"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    ring: none !important;
+    --tw-ring-shadow: none !important;
+    --tw-ring-offset-shadow: none !important;
+  }
+  
+  /* Remove Tailwind focus rings from input elements */
+  input,
+  textarea,
+  select,
+  [type="text"],
+  [type="email"],
+  [type="password"],
+  [type="number"],
+  [type="search"],
+  [type="url"],
+  [type="tel"],
+  [type="date"],
+  [type="time"],
+  [type="datetime-local"],
+  [contenteditable="true"] {
+    @apply focus-visible:ring-0 focus:ring-0 focus-visible:ring-offset-0 focus:ring-offset-0 !important;
+  }
 }
